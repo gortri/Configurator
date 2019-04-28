@@ -1,0 +1,10 @@
+.mat-select{
+    width:250px;
+}
+.mat-radio-group{
+  display: flex;
+  flex-direction: column;
+}
+.mat-input{
+    width: 50px
+}

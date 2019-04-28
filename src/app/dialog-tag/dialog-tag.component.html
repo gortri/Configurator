@@ -1,0 +1,48 @@
+<div style="text-align:left">Add Tag</div>
+<hr>
+<div>Tag values</div>
+<mat-dialog-content>
+  <br>
+  <div>Name: &nbsp;
+    <input matInput type="text" [(ngModel)]='tagName'>
+  </div>
+  <br>
+  <div>Data type: &nbsp;
+    <mat-select class='form-control' [(ngModel)]='defaultDataType'>
+      <mat-option [value]="dataType" *ngFor="let dataType of dataTypes">{{dataType.name}}</mat-option>
+    </mat-select>
+  </div>
+  <br>
+  <div>Number of elements: &nbsp;
+    <input matInput [(ngModel)]='numOfElements' type="number" step="1" min="1">
+  </div>
+  <br>
+  <div>Direction: &nbsp;
+    <mat-select class='form-control' [(ngModel)]='defaultDirection'>
+      <mat-option value="direction1">Gateway to OPC-UA/MQTT</mat-option>
+    </mat-select>
+  </div>
+  <br>
+  <div>Start address: &nbsp;
+    <div style="text-align:center">
+      <mat-radio-group aria-label="Select an start address" [(ngModel)]='defaultStartAddress'>
+        <mat-radio-button value="auto">First available &nbsp;</mat-radio-button>
+        <mat-radio-button value="manually">Enter manually</mat-radio-button>
+      </mat-radio-group>
+      <div style="text-align:right">
+          <input matInput type="number" value="0" step="1" min="0" [disabled]="defaultStartAddress==='auto'">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div>Size of tag: &nbsp;{{defaultDataType.size * numOfElements}}&nbsp;byte
+    
+  </div>
+</mat-dialog-content>
+<hr>
+<mat-dialog-actions>
+  <button mat-raised-button [disabled]="!tagName"  (click)="onCloseConfirm()">Save</button>&nbsp;
+  <button mat-raised-button [disabled]="!tagName"  (click)="onCloseReturn()">Save &
+    Add</button>&nbsp;
+  <button mat-raised-button (click)="onCloseCancel()">Cancel</button>
+</mat-dialog-actions>

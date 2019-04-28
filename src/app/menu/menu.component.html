@@ -1,0 +1,44 @@
+<div>
+  <button mat-button [matMenuTriggerFor]="fileMenu">File</button>
+  <mat-menu #fileMenu="matMenu">
+    <button mat-menu-item>New</button>
+    <button mat-menu-item>Open</button>
+    <button mat-menu-item>Generate</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="editMenu">Edit</button>
+  <mat-menu #editMenu="matMenu">
+    <button mat-menu-item (click)="openTag()">Add</button>
+    <button mat-menu-item>Modify</button>
+    <button mat-menu-item>Remove</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="helpMenu">Help</button>
+  <mat-menu #helpMenu="matMenu">
+    <button mat-menu-item>Help</button>
+    <button mat-menu-item>About</button>
+  </mat-menu>
+</div>
+<div>
+  <button mat-icon-button class="file-icon" title="New">
+    <mat-icon>insert_drive_file</mat-icon>
+  </button>
+  <button mat-icon-button class="folder-icon" title="Open...">
+    <mat-icon>folder</mat-icon>
+  </button>
+  <button mat-icon-button class="cloud-icon" title="Generate...">
+    <mat-icon>cloud_download</mat-icon>
+  </button>
+  <button mat-icon-button class="cloud-icon" title="Generate and send...">
+    <mat-icon>cloud_upload</mat-icon>
+  </button>
+  <button mat-icon-button class="add-icon" (click)="openTag()" title="Add...">
+    <mat-icon>add</mat-icon>
+  </button>
+  <button mat-icon-button class="create-icon" title="Modify...">
+    <mat-icon>create</mat-icon>
+  </button>
+  <button mat-icon-button class="remove-icon" title="Remove">
+    <mat-icon>remove</mat-icon>
+  </button>
+</div>
