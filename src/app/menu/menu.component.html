@@ -1,19 +1,19 @@
 <div>
-  <button mat-button [matMenuTriggerFor]="fileMenu">File</button>
+  <button mat-button [matMenuTriggerFor]="fileMenu" class="menu">File</button>
   <mat-menu #fileMenu="matMenu">
     <button mat-menu-item>New</button>
     <button mat-menu-item>Open</button>
     <button mat-menu-item>Generate</button>
   </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="editMenu">Edit</button>
+  <button mat-button [matMenuTriggerFor]="editMenu" class="menu">Edit</button>
   <mat-menu #editMenu="matMenu">
     <button mat-menu-item (click)="openTag()">Add</button>
     <button mat-menu-item>Modify</button>
     <button mat-menu-item>Remove</button>
   </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="helpMenu">Help</button>
+  <button mat-button [matMenuTriggerFor]="helpMenu" class="menu">Help</button>
   <mat-menu #helpMenu="matMenu">
     <button mat-menu-item>Help</button>
     <button mat-menu-item>About</button>
@@ -42,3 +42,4 @@
     <mat-icon>remove</mat-icon>
   </button>
 </div>
+<mat-divider></mat-divider>
