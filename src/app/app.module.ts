@@ -18,11 +18,13 @@ import {
   MatDividerModule,
   } from '@angular/material';
 import { DialogTagComponent } from './dialog-tag/dialog-tag.component';
+import { DisplayComponent } from './display/display.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DialogTagComponent
+    DialogTagComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,

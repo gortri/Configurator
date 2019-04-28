@@ -1,0 +1,13 @@
+<div>
+  <p class="protocolTitle">Supported protocol</p>
+  <mat-radio-group aria-label="Select an protocol" [(ngModel)]='defaultProtocol'>
+    <mat-radio-button value="opc-ua">OPC-UA</mat-radio-button>
+    <mat-radio-button value="mqtt">MQTT</mat-radio-button>
+  </mat-radio-group>
+  <div class="namespace">Namespace URI:&nbsp;
+    <input matInput type="text" [disabled]="defaultProtocol==='mqtt'">
+  </div>
+</div>
+<button mat-raised-button class="button" (click)="openTag()">Add...</button>
+<button mat-raised-button class="button">Modify...</button>
+<button mat-raised-button class="button">Remove</button>

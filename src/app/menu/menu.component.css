@@ -18,9 +18,28 @@
 }
 .button{
   position: relative;
-  top: 470px;
+  top: 400px;
   left: 20px;
   width: 100px;
   margin-right: 20px;
   background-color: gainsboro
+}
+.mat-radio-group{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 500px;
+    top: 110px;
+  }
+
+.namespace{
+    position: absolute;
+    left: 630px;
+    top: 110px;
+  }
+
+.protocolTitle{
+    position: absolute;
+    left: 500px;
+    top: 70px;
 }
