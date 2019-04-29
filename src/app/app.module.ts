@@ -19,12 +19,14 @@ import {
   } from '@angular/material';
 import { DialogTagComponent } from './dialog-tag/dialog-tag.component';
 import { DisplayComponent } from './display/display.component';
+import { DialogAboutComponent } from './dialog-about/dialog-about.component';
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     DialogTagComponent,
-    DisplayComponent
+    DisplayComponent,
+    DialogAboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,7 @@ import { DisplayComponent } from './display/display.component';
     MatIconModule,
     MatDividerModule
   ],
-  entryComponents: [DialogTagComponent],
+  entryComponents: [DialogTagComponent,DialogAboutComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import { DialogTagComponent } from '../dialog-tag/dialog-tag.component';
+import { DialogAboutComponent } from '../dialog-about/dialog-about.component';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -26,5 +27,10 @@ export class MenuComponent implements OnInit {
       }
     })
 
+  }
+  openAbout(){
+    this.tag.open(DialogAboutComponent, {
+      width: '600px',
+    })
   }
 }

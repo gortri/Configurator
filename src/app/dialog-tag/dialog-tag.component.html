@@ -4,7 +4,7 @@
 <mat-dialog-content>
   <br>
   <div>Name: &nbsp;
-    <input matInput type="text" [(ngModel)]='tagName'>
+      <input matInput type="text" [(ngModel)]='tagName'>
   </div>
   <br>
   <div>Data type: &nbsp;
@@ -24,12 +24,12 @@
   </div>
   <br>
   <div>Start address: &nbsp;
-    <div style="text-align:center">
+    <div style="text-align:left">
       <mat-radio-group aria-label="Select an start address" [(ngModel)]='defaultStartAddress'>
         <mat-radio-button value="auto">First available &nbsp;</mat-radio-button>
         <mat-radio-button value="manually">Enter manually</mat-radio-button>
       </mat-radio-group>
-      <div style="text-align:right">
+      <div style="text-align:center">
           <input matInput type="number" value="0" step="1" min="0" [disabled]="defaultStartAddress==='auto'">
       </div>
     </div>
